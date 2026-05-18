@@ -1,56 +1,57 @@
 # DevScope AI
 
-DevScope AI is a modern SaaS platform focused on intelligent GitHub repository analysis powered by AI.
+DevScope AI é uma plataforma SaaS moderna focada em análise inteligente de repositórios do GitHub utilizando IA.
 
-The platform is being built to help developers better understand the quality, structure, architecture, and scalability of their projects through automated technical insights and advanced code analysis.
-
----
-
-## Current Status
-
-Project currently under active development.
-
-Initial focus:
-- landing page
-- design system
-- dashboard architecture
-- GitHub integration
-- repository analysis engine
+A proposta da plataforma é ajudar desenvolvedores a entender melhor a qualidade, estrutura, arquitetura e escalabilidade de seus projetos através de análises automatizadas e insights técnicos avançados.
 
 ---
 
-## Vision
+## Status Atual
 
-DevScope AI aims to provide a cleaner and more meaningful way to evaluate software projects by combining:
-- real repository metrics
-- architecture analysis
-- AI-generated technical feedback
-- developer-focused insights
+Projeto em desenvolvimento ativo.
 
-The goal is to create a platform that feels useful for both:
-- developers improving their projects
-- recruiters evaluating technical quality
-
----
-
-## Planned Features
-
-- GitHub OAuth integration
-- Repository scanning
-- Stack detection
-- Architecture analysis
-- Code quality scoring
-- Performance insights
-- AI-powered recommendations
-- Seniority estimation
-- README generation
-- Technical dashboard
-- Security analysis
-- AI repository reports
+Foco inicial:
+- Landing page
+- Sistema de design
+- Arquitetura do dashboard
+- Integração com GitHub
+- Engine de análise de repositórios
 
 ---
 
-## Tech Stack
+## Visão
+
+O DevScope AI busca oferecer uma forma mais clara e útil de avaliar projetos de software, combinando:
+
+- Métricas reais do repositório
+- Análise de arquitetura
+- Feedback técnico gerado por IA
+- Insights voltados para desenvolvedores
+
+O objetivo é criar uma plataforma útil tanto para:
+- Desenvolvedores que desejam melhorar seus projetos
+- Recrutadores avaliando qualidade técnica
+
+---
+
+## Funcionalidades Planejadas
+
+- Integração com GitHub OAuth
+- Escaneamento de repositórios
+- Detecção de stack
+- Análise de arquitetura
+- Pontuação de qualidade do código
+- Insights de performance
+- Recomendações geradas por IA
+- Estimativa de senioridade
+- Geração automática de README
+- Dashboard técnico
+- Análise de segurança
+- Relatórios inteligentes de repositório
+
+---
+
+## Stack Utilizada
 
 ### Frontend
 - Next.js
@@ -61,18 +62,18 @@ The goal is to create a platform that feels useful for both:
 
 ### Backend
 - Node.js
-- REST API
+- API REST
 
-### Database
+### Banco de Dados
 - PostgreSQL
 
-### Infrastructure
+### Infraestrutura
 - Vercel
 - GitHub
 
 ---
 
-## Project Structure
+## Estrutura do Projeto
 
 ```bash
 devscope-ai/
