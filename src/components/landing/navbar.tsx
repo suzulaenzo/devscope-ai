@@ -70,13 +70,13 @@ export function Navbar() {
 
           {/* Desktop actions */}
           <div className="hidden items-center gap-3 md:flex">
-            <Button variant="ghost" size="sm" asChild>
+            <Button variant="ghost" size="sm">
               <Link href="/login">Sign in</Link>
             </Button>
-            <Button size="sm" asChild>
+            <Button size="sm">
               <Link href="/signup">
-                Get started
-                <ChevronRight className="h-3.5 w-3.5" />
+                Get started 
+                
               </Link>
             </Button>
           </div>
@@ -138,10 +138,10 @@ export function Navbar() {
                 ))}
               </nav>
               <div className="flex flex-col gap-2 border-t border-white/[0.07] pt-6">
-                <Button variant="ghost" asChild>
+                <Button variant="ghost">
                   <Link href="/login">Sign in</Link>
                 </Button>
-                <Button asChild>
+                <Button>
                   <Link href="/signup">Get started free</Link>
                 </Button>
               </div>
