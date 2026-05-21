@@ -76,7 +76,6 @@ export function Navbar() {
             <Button size="sm">
               <Link href="/signup">
                 Get started 
-                
               </Link>
             </Button>
           </div>

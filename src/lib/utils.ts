@@ -23,20 +23,30 @@ export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);
 }
 
-/** Validate GitHub URL */
+/** Validate GitHub URL or owner/repo shorthand */
 export function isValidGithubUrl(url: string): boolean {
-  return /^(https?:\/\/)?(www\.)?github\.com\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_.-]+\/?$/.test(
-    url.trim()
-  );
+  const s = url.trim();
+  if (/^(https?:\/\/)?(www\.)?github\.com\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_.-]+(\/.*)?$/.test(s))
+    return true;
+  if (/^[a-zA-Z0-9_-]+\/[a-zA-Z0-9_.-]+(\/.*)?$/.test(s)) return true;
+  return false;
 }
 
-/** Extract owner/repo from GitHub URL */
+/** Extract owner/repo from GitHub URL or owner/repo shorthand */
 export function parseGithubUrl(
   url: string
 ): { owner: string; repo: string } | null {
-  const match = url.match(
+  const s = url.trim().replace(/\/$/, "");
+
+  // Full URL
+  const urlMatch = s.match(
     /github\.com\/([a-zA-Z0-9_-]+)\/([a-zA-Z0-9_.-]+)/
   );
-  if (!match) return null;
-  return { owner: match[1], repo: match[2] };
+  if (urlMatch) return { owner: urlMatch[1], repo: urlMatch[2] };
+
+  // owner/repo shorthand
+  const shortMatch = s.match(/^([a-zA-Z0-9_-]+)\/([a-zA-Z0-9_.-]+)$/);
+  if (shortMatch) return { owner: shortMatch[1], repo: shortMatch[2] };
+
+  return null;
 }
