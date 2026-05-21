@@ -50,7 +50,7 @@ export function Hero() {
       return;
     }
     // Route to analysis page
-    window.location.href = `/analyze?repo=${encodeURIComponent(url)}`;
+    window.location.href = `/analyze?repo=${encodeURIComponent(url.trim())}`;
   };
 
   const handleKey = (e: React.KeyboardEvent) => {
